@@ -6,10 +6,8 @@ home="/LUSTRE/Genetica/hvazquez/"
 ngm="Cibiv-NextGenMap-33e92fb/bin/ngm-0.5.5/ngm"
 ref="../data/B73_v4/Zea_mays.B73_RefGen_v4.dna_rm.toplevel.fa.gz"
 bam="../out_bam"
-sort_bam="../sort_bam"
 fastq="/LUSTRE/Genetica/hvazquez/out"
 
-#Alignment
 
 ls  $fastq | grep fastq |  grep R | sed s/.R1.fastq.gz// |sed s/.R2.fastq.gz// | uniq > lele.txt
 
