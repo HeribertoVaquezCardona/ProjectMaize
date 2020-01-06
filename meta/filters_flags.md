@@ -1,4 +1,4 @@
-# Filters
+# Filters and Flags
 This file explains some filters and flags that we used by each script. 
 
 **demultiplex.sh**
