@@ -19,7 +19,7 @@ HaplotypeCaller: calls the discovery program.
 -O: outuput vcf files.
 -ERC GVCF: emitting reference confidence score, vcf format.
 
-**merge_gvcf.sh**
+**merge_gvcf_1.sh**
 CombinesGVCFs: calls the combined program.
 -R: reference genome.
 --read-filter MappingQualityReadFilter: cares quality.
