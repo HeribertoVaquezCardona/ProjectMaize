@@ -8,6 +8,7 @@ ref="../data/B73_v4/Zea_mays.B73_RefGen_v4.dna_rm.toplevel.fa.gz"
 bam="../out_bam"
 fastq="../out"
 log="../out_log"
+project="Zmays_v4_2019"
 
 
 ls  $fastq | grep fastq |  grep R | sed s/.R1.fastq.gz// |sed s/.R2.fastq.gz// | uniq > $home/meta/samplelist.txt
@@ -19,7 +20,7 @@ do
 {
 	echo "Aligning paired $name"
 
-$ngm -r $ref -p -1 ../out/${name}.R1.fastq.gz -2 ../out/${name}.R2.fastq.gz -o $bam/$name.bam  -t 8
+$ngm -r $ref -p -1 ../out/${name}.R1.fastq.gz -2 ../out/${name}.R2.fastq.gz -o $bam/$name.bam  -t 8 -b --rg-id $name --rg-sm $name --rg-pl illumina --rg-pu $project --rg-lb Zea-Mays_S16_L004
 
 echo "Processing for $name"
 
@@ -29,3 +30,4 @@ samtools sort -@ 8 $bam/$name.bam > $bam/${name}.sort.bam
 }>& $log/$name.alignment.log
 fi
 done < $home/meta/samplelist.txt
+
