@@ -35,7 +35,7 @@ CombinesGVCFs: calls the combined program.
 
 **run_admixture.sh**
 -K: number of clusters.
--likes inputBeagleFile.gz: I goy this file with make_beagleunput.sh.
+-likes inputBeagleFile.gz (I got this file with make_beagleunput.sh).
 -P: number of threads.
 -o: prefix of output file names.
 -minMaf 0.05: because we have small reads (150) and a few popultaion.
